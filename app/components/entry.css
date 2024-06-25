@@ -1,0 +1,12 @@
+.entry-con {
+    width: 120%;
+    position: relative;
+    padding-bottom: 50px; /* Ensure there's space for the .entry-info element */
+}
+
+.entry-info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: coral;
+}
