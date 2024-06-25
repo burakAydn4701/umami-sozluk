@@ -1,7 +1,7 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
-export default async function Input(request) {
+export default async function GET(request) {
 
     try {
         await sql`INSERT INTO Basliks (title) VALUES ("recep ivedik"),
