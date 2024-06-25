@@ -1,0 +1,21 @@
+
+body {
+    margin: 0;
+}
+
+.bar {
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    height: 10%;
+}
+
+.logo-link {
+    margin-left: 10%;
+}
+
+.bar h1 {
+    color: black;
+    font-size: x-large;
+}
+

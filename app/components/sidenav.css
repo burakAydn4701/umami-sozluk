@@ -1,0 +1,24 @@
+
+.sidenav {
+    margin-left: 11%;
+    margin-top: 1%;
+    border-right: solid gray 1px;
+    width: 15%;
+    padding-right: 5px;
+}
+
+.solframe-baslik-link {
+    color: coral;
+}
+
+.solframe {
+    list-style: none;
+    font-size: medium;
+    color: coral;
+}
+
+.frame-baslik {
+    height: 25px;
+    margin-bottom: 7%;
+    color: coral;
+}
