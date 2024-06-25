@@ -1,7 +1,7 @@
 import {sql} from "@vercel/postgres";
 import {NextResponse} from "next/server";
 
-async function seedEntries(request) {
+async function GET(request) {
     const basliks = [
         {
             id: 0,
