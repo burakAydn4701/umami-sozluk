@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Navbar from "@/app/components/navbar";
+import Sidenav from "@/app/components/sidenav";
+import styles from "./globals.css"
+import {Suspense} from "react";
+import Loading from "@/app/components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +14,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en">
+      <body className={inter.className}>
+      <Navbar/>
+      <div className={"general-con"}>
+        <Sidenav />
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+        </Suspense>
+      </div>
+      </body>
+      </html>
   );
 }

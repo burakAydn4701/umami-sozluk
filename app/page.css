@@ -1,0 +1,15 @@
+
+main {
+    display: flex;
+}
+
+.home-middle {
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+.home-title {
+    font-size: 22px;
+    color: coral;
+}
+
