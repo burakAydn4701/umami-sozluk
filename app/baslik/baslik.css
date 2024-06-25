@@ -1,0 +1,13 @@
+
+.baslik-main {
+    margin-left: 5%;
+    width: 25%;
+}
+.baslik-main h1 {
+    color: coral;
+    margin-bottom: 10%;
+    font-size: 3vh;
+}
+.baslik-main form {
+    margin-top: 25%;
+}
