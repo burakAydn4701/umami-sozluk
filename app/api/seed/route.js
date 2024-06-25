@@ -1,22 +1,16 @@
-import {sql} from "@vercel/postgres";
+import {db} from "@vercel/postgres";
 import {NextResponse} from "next/server";
 
-export async function GET(request) {
-    try {
-        const result =
-            await sql`CREATE TABLE Basliks ( id SERIAL PRIMARY KEY,
-            title varchar(255) NOT NULL
-             );`;
-            await sql`CREATE TABLE Entries ( id SERIAL PRIMARY KEY,
-            text varchar(255) NOT NULL,
-            baslik_id INT,
-            author varchar(255) NOT NULL,
-            FOREIGN KEY (baslik_id) REFERENCES Basliks (id) ON DELETE CASCADE
-             );`;
+const client = await db.connect()
+export async function seedBasliks(request) {
+    await client.sql`
+     CREATE TABLE IF NOT EXISTS Basliks (
+       id SERIAL PRIMARY KEY,
+       title VARCHAR(25) NOT NULL
+     );
+    `;
 
-        return NextResponse.json({ result }, { status: 200 });
-    } catch (error) {
-        return NextResponse.json({ error }, { status: 500 });
-    }
-
+    await client.sql`
+    INSERT INTO Basliks (title) VALUES ("recep ivedik"), ("tiktok'ta dans eden gençler"), ("arda güler'in gürcistan'a attığı gol");
+    `;
 }
