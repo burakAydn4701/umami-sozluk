@@ -14,8 +14,8 @@ export async function GET(request) {
             FOREIGN KEY (baslik_id) REFERENCES Basliks (id) ON DELETE CASCADE
              );`;
             await sql`INSERT INTO Basliks (title) VALUES ("recep ivedik"),
-            ("tiktok'ta dans eden gençler")
-            ("arda güler'in gürcistan'a attığı gol")"`
+            ("tiktok'ta dans eden gençler"),
+            ("arda güler'in gürcistan'a attığı gol");`;
 
         return NextResponse.json({ result }, { status: 200 });
     } catch (error) {
