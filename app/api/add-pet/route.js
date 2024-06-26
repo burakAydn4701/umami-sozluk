@@ -1,18 +1,19 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
+import {initialBasliks} from "@/app/api/initialBasliks/initialBasliks";
 
 export async function GET(request) {
-    const { searchParams } = new URL(request.url);
-    const petName = searchParams.get('petName');
-    const ownerName = searchParams.get('ownerName');
+    const recepivedik = initialBasliks[0].title
+    const tiktokta = initialBasliks[1].title
+    const ardagülerin = initialBasliks[2].title
 
     try {
-        if (!petName || !ownerName) throw new Error('Pet and owner names required');
-        await sql`INSERT INTO Pets (Name, Owner) VALUES (${petName}, ${ownerName});`;
+        if (!recepivedik) throw new Error('title names required');
+        await sql`INSERT INTO basliks (title) VALUES (${recepivedik});`;
     } catch (error) {
         return NextResponse.json({ error }, { status: 500 });
     }
 
-    const pets = await sql`SELECT * FROM Pets;`;
-    return NextResponse.json({ pets }, { status: 200 });
+    const basliks = await sql`SELECT * FROM basliks;`;
+    return NextResponse.json({ basliks }, { status: 200 });
 }
