@@ -5,11 +5,14 @@ import {initialBasliks} from "@/app/api/initialBasliks/initialBasliks";
 export async function GET(request) {
     const recepivedik = initialBasliks[0].title
     const tiktokta = initialBasliks[1].title
-    const ardagülerin = initialBasliks[2].title
+    const ardagulerin = initialBasliks[2].title
 
     try {
-        if (!recepivedik || !tiktokta) throw new Error('title names required');
-        await sql`INSERT INTO basliks (title) VALUES (${recepivedik}, ${tiktokta}, ${ardagülerin});`;
+        if (!recepivedik || !tiktokta || !ardagulerin) throw new Error('title names required');
+        await sql`INSERT INTO basliks (title) VALUES (${recepivedik});`;
+        await sql`INSERT INTO basliks (title) VALUES (${tiktokta});`;
+        await sql`INSERT INTO basliks (title) VALUES (${ardagulerin});`;
+
     } catch (error) {
         return NextResponse.json({ error }, { status: 500 });
     }
