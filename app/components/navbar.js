@@ -16,6 +16,14 @@ export default function Navbar() {
             <a href={"/"} >
                 <h1>Umami Sözlük</h1>
             </a>
+            <div className={"login-div"}>
+                <a href={"/login"} className={"navbar-login"}>
+                    <h2>giriş yap</h2>
+                </a>
+                <a href={"/signup"}>
+                    <h2 className={"navbar-signup"}>kayıt ol</h2>
+                </a>
+            </div>
         </div>
     )
 }
