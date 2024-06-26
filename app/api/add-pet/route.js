@@ -8,8 +8,8 @@ export async function GET(request) {
     const ardagülerin = initialBasliks[2].title
 
     try {
-        if (!recepivedik) throw new Error('title names required');
-        await sql`INSERT INTO basliks (title) VALUES (${recepivedik});`;
+        if (!recepivedik || !tiktokta) throw new Error('title names required');
+        await sql`INSERT INTO basliks (title) VALUES (${recepivedik}, ${tiktokta}, ${ardagülerin});`;
     } catch (error) {
         return NextResponse.json({ error }, { status: 500 });
     }
