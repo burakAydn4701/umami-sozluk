@@ -11,6 +11,20 @@ export async function seedBasliks(request) {
     `;
 
     await client.sql`
-    INSERT INTO Basliks (title) VALUES ("recep ivedik"), ("tiktok'ta dans eden gençler"), ("arda güler'in gürcistan'a attığı gol");
+     CREATE TABLE IF NOT EXISTS Users (
+       username VARCHAR(25) PRIMARY KEY,
+       password VARCHAR(25) NOT NULL,
+     );
+    `;
+
+    await client.sql`
+     CREATE TABLE IF NOT EXISTS Entries (
+       id SERIAL PRIMARY KEY,
+       baslik_id INT,
+       text TEXT NOT NULL,
+       author VARCHAR(25) NOT NULL,
+       FOREIGN KEY (baslik_id) REFERENCES Basliks (id) ON DELETE CASCADE,
+       FOREIGN KEY (author) REFERENCES Users (username)
+     );
     `;
 }
