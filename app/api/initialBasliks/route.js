@@ -9,6 +9,7 @@ export async function GET(request) {
     const ardagülerin = initialBasliks[2].title
 
     try {
+        if (!recepivedik || !tiktoktadans || !ardagülerin) throw new Error('title required');
         await sql`INSERT INTO basliks (title) VALUES (${recepivedik}, ${tiktoktadans}, ${ardagülerin});`;
     } catch (error) {
         return NextResponse.json({ error }, { status: 500 });
