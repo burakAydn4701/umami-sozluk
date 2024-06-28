@@ -1,30 +1,24 @@
 "use client"
 import React, { useState } from 'react';
 import styles from "./inputForm.css"
+import {Enter} from "@/app/api/input/route";
 
 const InputForm = () => {
     const [text, setText] = useState('');
     const [nick, setNick] = useState("")
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (text.trim()) {
-            console.log('Submitted text:', text);
-            // Add your submission logic here
-            setText(''); // Clear the textarea after submission
-        }
-    };
-
     const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            handleSubmit(e);
+        if (e.key === 'Enter') {
+            handleSubmit()
         }
     };
+    const handleSubmit = () => {
+        Enter({text, nick})
+    }
 
     return (
         <div className={"form-container"}>
-            <form className="entry-form" onSubmit={handleSubmit}>
+            <form className="entry-form" action={Enter}>
                 <textarea
                     className="text-input"
                     value={text}
