@@ -18,7 +18,7 @@ export default function Baslik(request) {
                     <Entry entrysBaslik={current} no={e.no} key={e.no} />
                 ))}
             </div>
-            <InputForm />
+            <InputForm currentBaslik={current.title}/>
         </div>
     )
 }

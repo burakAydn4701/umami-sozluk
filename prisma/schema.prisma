@@ -13,17 +13,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Entry {
+model entry {
   no Int @id @default(autoincrement())
   content String
   cretedAt DateTime @default(now()) @db.Timestamp(0)
   authorName String  @db.VarChar(255)
   baslikName String @db.VarChar(255)
-  baslik Baslik @relation(fields: [baslikName], references: [title], onDelete: NoAction, onUpdate: NoAction)
+  baslik baslik @relation(fields: [baslikName], references: [title], onDelete: NoAction, onUpdate: NoAction)
 }
 
-model Baslik {
+model baslik {
   id Int @id @default(autoincrement())
   title String @unique @db.VarChar(255)
-  entries Entry[]
+  entries entry[]
 }

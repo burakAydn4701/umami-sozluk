@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from "./inputForm.css"
 import {Enter} from "@/app/api/input/enter";
 
-const InputForm = () => {
+const InputForm = ({currentBaslik}) => {
     const [text, setText] = useState('');
     const [nick, setNick] = useState("")
 
