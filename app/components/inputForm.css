@@ -1,19 +1,32 @@
 /* TextForm.css */
+
+.form-container {
+    background-color: #ffb28e;
+    width: 50vh;
+    height: 26vh;
+    padding: 8% 15%;
+    margin-top: 20%;
+}
+
 .entry-form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
 }
 
 .text-input {
-    width: 130%;
-    height: 12vh;
-    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     resize: vertical;
-    margin-bottom: 7px;
+    margin-bottom: 2%;
+}
+
+.nick-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 2%;
 }
 
 .submit-button {

@@ -20,18 +20,10 @@ model Entry {
   authorName String  @db.VarChar(255)
   baslikName String @db.VarChar(255)
   baslik Baslik @relation(fields: [baslikName], references: [title], onDelete: NoAction, onUpdate: NoAction)
-  author User @relation(fields: [authorName], references: [username], onDelete: NoAction, onUpdate: NoAction)
 }
 
 model Baslik {
   id Int @id @default(autoincrement())
   title String @unique @db.VarChar(255)
   entries Entry[]
-}
-
-model User {
-  username String @unique @db.VarChar(255)
-  password String @db.VarChar(255)
-  entries Entry[]
-  testpurposes String
 }

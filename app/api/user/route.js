@@ -2,7 +2,6 @@ import {db} from "@/app/lib/prisdb";
 import {NextResponse} from "next/server";
 export async function POST(request) {
 
-
     try {
         const body = await request.json()
         const { username, password } = body

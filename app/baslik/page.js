@@ -3,7 +3,7 @@ import {useSearchParams} from "next/navigation";
 import Data from "@/app/data";
 import Entry from "@/app/components/entry";
 import styles from "./baslik.css"
-import InputForm from "@/app/api/input/route";
+import InputForm from "@/app/components/inputForm";
 export default function Baslik(request) {
     const searchParams = useSearchParams()
     const id = searchParams.get("id")
