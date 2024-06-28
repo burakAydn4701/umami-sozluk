@@ -1,38 +1,66 @@
-
+/* Navbar.css */
 body {
     margin: 0;
 }
-
-.bar {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 2rem;
     background-color: coral;
+    color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: whitesmoke;
+    color: whitesmoke;
+}
+
+.navbar-left {
     display: flex;
     align-items: center;
-    height: 10%;
+    margin-left: 8%;
 }
 
-.logo-link {
-    margin-left: 10%;
+.navbar-logo {
+    height: 40px;
+    margin-right: 1rem;
 }
 
-.bar h1 {
-    color: black;
-    font-size: x-large;
-}
-.bar h2 {
-    color: black;
-    font-size: larger;
-    float: right;
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.navbar-login {
+.navbar-right {
     display: flex;
+    align-items: center;
 }
-.navbar-signup {
-    display: flex;
-    margin-left: 15px;
+
+.navbar-link {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
 }
-.login-div {
-    display: flex;
-    float: right;
-    margin-left: 50%;
+
+.navbar-link:hover {
+    opacity: 0.8;
+}
+
+.navbar-button {
+    background-color: whitesmoke;
+    color: coral;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #f8f8f8;
+    color: #ff6f61;
+    opacity: 1;
 }

@@ -1,29 +1,27 @@
+// Navbar.js
+import React from 'react';
 import logo from "./lotus-logo.png"
-import Image from "next/image";
 import styles from "./navbar.css"
+import Image from "next/image";
 import Link from "next/link";
-export default function Navbar() {
+
+const Navbar = () => {
     return (
-        <div className={"bar"}>
-            <a href={"/"} className={"logo-link"}>
-                <Image src={logo}
-                       alt={"logo"}
-                       height={45}
-                       width={45}
-                       className={"bar-logo"}
-                />
-            </a>
-            <a href={"/"} >
-                <h1>Umami Sözlük</h1>
-            </a>
-            <div className={"login-div"}>
-                <a href={"/login"} className={"navbar-login"}>
-                    <h2>giriş yap</h2>
-                </a>
-                <a href={"/signup"}>
-                    <h2 className={"navbar-signup"}>kayıt ol</h2>
+        <nav className="navbar">
+            <div className="navbar-left">
+                <Link href={"/"}>
+                    <Image src={logo} alt={"logo"} width={45} height={45}/>
+                </Link>
+                <a href={"/"}>
+                    <span className="navbar-title">Umami Sözlük</span>
                 </a>
             </div>
-        </div>
-    )
-}
+            <div className="navbar-right">
+                <a href="/login" className="navbar-link">Giriş yap</a>
+                <a href="/signup" className="navbar-link navbar-button">Kayıt ol</a>
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;
