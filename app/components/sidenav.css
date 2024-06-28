@@ -1,24 +1,34 @@
-
 .sidenav {
-    margin-left: 11%;
-    margin-top: 1%;
-    border-right: solid gray 1px;
-    width: 15%;
-    padding-right: 5px;
+    width: 30vh;
+    height: 100vh;
+    margin-left: 22vh;
 }
 
-.solframe-baslik-link {
+.heading {
+    font-size: 20px;
+    font-family: inherit;
+    padding-bottom: 7px;
+}
+
+.linkList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkItem {
+    margin-bottom: 8px;
     color: coral;
 }
 
-.solframe {
-    list-style: none;
-    font-size: medium;
+.link {
+    display: block;
+    padding: 8px 0;
     color: coral;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.frame-baslik {
-    height: 25px;
-    margin-bottom: 7%;
-    color: coral;
+.link:hover {
+    color: orangered;
 }

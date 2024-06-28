@@ -1,33 +1,36 @@
+/*
 "use client"
 import React, { useState } from 'react';
-import styles from "../login/login.css"
+import {Form, useForm} from "react-hook-form"
+import styles from "../login/page"
+import * as z from "zod"
 
-const SignupForm = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle login logic here
-        console.log('Signup submitted', { username, password });
-    };
+
+export default function SignupForm() {
+    const formSchema = z.object({
+        username: z.string().min(1, "kullanıcı adı boş kalamaz").max(20,
+            "kullanıcı adı 20 karakterden uzun olamaz"),
+        password: z.string().min(1, "şifre boş kalamaz").max(20,
+            "şifre 20 karakterden uzun olamaz")
+    })
 
     return (
         <div className="login-container">
             <form className="login-form" onSubmit={handleSubmit}>
-                <h2>Kayıt</h2>
+                <h2>Login</h2>
                 <div className="form-group">
-                    <label htmlFor="username">Kullanıcı adı</label>
+                    <label htmlFor="username">Username</label>
                     <input
                         type="text"
                         id="username"
-                        value={username}
+                        value={}
                         onChange={(e) => setUsername(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Şifre</label>
+                    <label htmlFor="password">Password</label>
                     <input
                         type="password"
                         id="password"
@@ -36,10 +39,9 @@ const SignupForm = () => {
                         required
                     />
                 </div>
-                <button type="submit">Kayıt ol</button>
+                <button type="submit">Log In</button>
             </form>
         </div>
     );
-};
-
-export default SignupForm;
+}
+*/

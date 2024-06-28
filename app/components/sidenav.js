@@ -1,21 +1,22 @@
-import Data from "@/app/data";
-import styles from "./sidenav.css"
 import Link from "next/link";
+import styles from "./sidenav.css";
+import Data from "@/app/data";
+
 export default function Sidenav() {
-    let basliks = Data()
+    const basliks = Data();
 
     return (
-        <div className={"sidenav"}>
-            <h3 className={"gündem"}>gündem</h3>
-            <div className={"solframe"}>
-                {basliks.map(b => (
-                    <div  key={b.id} className={"frame-baslik"}>
-                        <Link href={"/baslik?id=" + b.id}>
-                            <p className={"solframe-baslik-link"}>{b.title}</p>
+        <nav className={"sidenav"}>
+            <h2 className={"heading"}>gündem</h2>
+            <ul className={"linkList"}>
+                {basliks.map(baslik => (
+                    <li key={baslik.id} className={"linkItem"}>
+                        <Link href={`/baslik?id=${baslik.id}`} className={"link"}>
+                            {baslik.title}
                         </Link>
-                    </div>
+                    </li>
                 ))}
-            </div>
-        </div>
-    )
+            </ul>
+        </nav>
+    );
 }

@@ -20,7 +20,7 @@ a {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: 8%;
+    margin-left: 16vh;
 }
 
 .navbar-logo {
