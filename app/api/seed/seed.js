@@ -25,9 +25,7 @@ export async function Seed() {
     }
 
     try {
-        await sql`INSERT INTO entry (content, authorName, baslikName) VALUES (${entry1.content}, 
-         ${entry1.author}), 
-         ${entry1.baslik};`;
+        await sql`INSERT INTO basliktest (title) VALUES (${entry1.baslik};`;
     } catch (error) {
         return NextResponse.json({ error }, { status: 500 });
     }
