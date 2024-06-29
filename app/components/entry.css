@@ -1,6 +1,5 @@
 .entry-con {
-    width: 120%;
-    position: relative;
+    max-width: 1000vh;
     padding-bottom: 50px; /* Ensure there's space for the .entry-info element */
 }
 

@@ -1,24 +1,14 @@
 "use client"
+import ClientComponent from "@/app/baslik/client-component";
 import {useSearchParams} from "next/navigation";
-import Data from "@/app/data";
-import Entry from "@/app/components/entry";
-import styles from "./baslik.css"
-import InputForm from "@/app/components/inputForm";
-export default function Baslik(request) {
+
+export default function Page() {
     const searchParams = useSearchParams()
-    const id = searchParams.get("id")
-    const data = Data()
-    const current = data.find(b => b.id == id)
+    const id = searchParams.get("id")// Example ID, you can replace this with dynamic data
 
     return (
-        <div className={"baslik-main"}>
-            <h1 className={"baslik-page-title"}>{current.title}</h1>
-            <div className={"baslik-entrys-con"}>
-                {current.entries.map(e => (
-                    <Entry entrysBaslik={current} no={e.no} key={e.no} />
-                ))}
-            </div>
-            <InputForm currentBaslik={current.title}/>
+        <div>
+            <ClientComponent id={id} />
         </div>
-    )
+    );
 }

@@ -1,12 +1,12 @@
 import styles from "./entry.css"
-export default function Entry({entrysBaslik, no}) {
+export default function Entry({content, author}) {
     return (
         <div className={"entry-con"}>
             <div className={"entry-body"}>
-                <p>{entrysBaslik.entries[no].text}</p>
+                <p>{content}</p>
             </div>
             <div className={"entry-info"}>
-                <p>{entrysBaslik.entries[no].author}</p>
+                <p>{author}</p>
             </div>
         </div>
     )
