@@ -18,7 +18,7 @@ model entry {
   content String
   cretedAt DateTime @default(now()) @db.Timestamp(0)
   authorName String  @db.VarChar(255)
-  baslikName String @db.VarChar(255)
+  baslikName String
   baslik baslik @relation(fields: [baslikName], references: [title], onDelete: NoAction, onUpdate: NoAction)
 }
 

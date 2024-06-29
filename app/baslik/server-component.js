@@ -8,9 +8,9 @@ export default async function fetchBaslik(id) {
         },
         include: {
             entries: {
-                select: {content: true,
-                    authorName: true,
-                    no: true
+                select: {
+                    content: true,
+                    authorName: true
                 }
             }
         }

@@ -6,16 +6,33 @@ export default function Sidenav() {
     const basliks = [
         {
             id: 1,
-            title: "recep ivedik"
+            title: "24 haziran 2024 almanya danimarka maçı"
         },
         {
             id: 2,
-            title: "tiktok'ta dans eden gençler"
+            title: "türkiye'de memur sayısı çok safsatası"
+        },
+        {
+            id: 3,
+            title: "chatGPT"
         },
         {
             id: 4,
             title: "arda güler'in gürcistan'a attığı gol"
-        }]
+        },
+        {
+            id: 5,
+            title: "tereddüt çizgisi"
+        },
+        {
+            id: 6,
+            title: "tiktok'ta dans eden gençler"
+        },
+        {
+            id: 7,
+            title:  "recep ivedik"
+        }
+        ]
 
     return (
         <nav className={"sidenav"}>

@@ -2,8 +2,8 @@
 
 .form-container {
     background-color: #ffb28e;
-    width: 50vh;
-    height: 26vh;
+    width: 40vh;
+    height: 20vh;
     padding: 8% 15%;
     margin-top: 20%;
 }
@@ -19,6 +19,8 @@
     font-size: 16px;
     resize: vertical;
     margin-bottom: 2%;
+    width: 300px;
+    align-self: center;
 }
 
 .nick-input {
@@ -27,6 +29,8 @@
     font-size: 16px;
     resize: vertical;
     margin-bottom: 2%;
+    width: 300px;
+    align-self: center;
 }
 
 .submit-button {

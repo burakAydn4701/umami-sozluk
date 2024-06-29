@@ -1,11 +1,10 @@
 .entry-con {
-    max-width: 1000vh;
-    padding-bottom: 50px; /* Ensure there's space for the .entry-info element */
+    padding-bottom: 30px; /* Ensure there's space for the .entry-info element */
+    width: 400px;
+    margin-bottom: 10%;
 }
 
 .entry-info {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     color: coral;
+    float: right;
 }

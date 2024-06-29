@@ -28,6 +28,7 @@
     color: coral;
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 15px;
 }
 
 .link:hover {

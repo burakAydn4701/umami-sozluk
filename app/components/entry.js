@@ -1,5 +1,5 @@
 import styles from "./entry.css"
-export default function Entry({content, author}) {
+export default function Entry({content, author, time}) {
     return (
         <div className={"entry-con"}>
             <div className={"entry-body"}>
@@ -7,6 +7,7 @@ export default function Entry({content, author}) {
             </div>
             <div className={"entry-info"}>
                 <p>{author}</p>
+                <p>{time}</p>
             </div>
         </div>
     )

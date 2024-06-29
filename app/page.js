@@ -10,20 +10,11 @@ export default function Home() {
       <main>
         <div className={"home-middle"}>
           <h3 className={"home-title"}>{baslikdata[0].title}</h3>
-          <Entry
-              entrysBaslik={baslikdata[0]}
-              no={0}
-          />
+          <Entry content={"yarısında çıktığım filmdir"} author={"sozlukcu47"}/>
           <h3 className={"home-title"}>{baslikdata[1].title}</h3>
-          <Entry
-              entrysBaslik={baslikdata[1]}
-              no={0}
-          />
+          <Entry author={"boomer35"} content={"gümbür gümbür geliyor denen z kuşağı bunlar işte. yazık."}/>
           <h3 className={"home-title"}>{baslikdata[2].title}</h3>
-          <Entry
-              entrysBaslik={baslikdata[2]}
-              no={0}
-          />
+          <Entry author={"robertobaggio"} content={"gürcistan'a karşı atmıştır, abartmayınız"}/>
         </div>
       </main>
   );
