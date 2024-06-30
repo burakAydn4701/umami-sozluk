@@ -21,6 +21,8 @@ export default function ClientComponent({ id }) {
         }
     }, [id]);
 
+    entries.sort((a, b) => a.no - b.no)
+
     return (
         <div className={"baslik-main"}>
             <h1>{title}</h1>
