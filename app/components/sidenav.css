@@ -30,10 +30,6 @@
     font-size: 15px;
 }
 
-.link:hover {
-    color: orangered;
-}
-
 .linkItem:hover{
     background-color: #f1bcaa;
 }
