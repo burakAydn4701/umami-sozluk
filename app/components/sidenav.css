@@ -7,7 +7,7 @@
 .heading {
     font-size: 20px;
     font-family: inherit;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
     align-self: self-start;
 }
 
@@ -18,13 +18,12 @@
 }
 
 .linkItem {
-    margin-bottom: 8px;
     color: coral;
 }
 
 .link {
     display: block;
-    padding: 8px 0;
+    padding: 14px 4px;
     color: coral;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -33,4 +32,8 @@
 
 .link:hover {
     color: orangered;
+}
+
+.linkItem:hover{
+    background-color: #f1bcaa;
 }
