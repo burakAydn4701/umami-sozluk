@@ -3,6 +3,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/app/lib/prisdb';
 
+
 export async function POST(req) {
     const { content, authorName, baslikName } = await req.json();
 

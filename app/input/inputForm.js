@@ -1,11 +1,13 @@
 // InputForm.js
-
 import React, { useState } from 'react';
 import "./inputForm.css"
+import {useRouter} from "next/navigation";
+import fetchBaslik from "@/app/baslik/server-component";
 const InputForm = ({ baslikName }) => {
     const [text, setText] = useState('');
     const [nick, setNick] = useState('');
     const [message, setMessage] = useState('');
+    const router = useRouter()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -27,10 +29,13 @@ const InputForm = ({ baslikName }) => {
             setMessage('Entry added successfully');
             setText('');
             setNick('');
+
+            router.push("/baslik?name=" + baslikName);
         } catch (error) {
             console.error('Error adding entry:', error);
             setMessage('An error occurred');
         }
+
     };
 
     return (
