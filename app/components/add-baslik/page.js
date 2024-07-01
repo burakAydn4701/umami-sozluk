@@ -2,19 +2,21 @@
 "use client"
 import React, { useState } from 'react';
 import "./addbaslik.css"
-import {useRouter} from "next/navigation"
+import { useRouter } from "next/navigation"
+
 const BaslikForm = () => {
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
     const [nick, setNick] = useState('');
     const [message, setMessage] = useState('');
-    const router = useRouter()
+    const router = useRouter();
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         try {
-            const response = await fetch('/api/addBaslik', {
+            // Add baslik first
+            const baslikResponse = await fetch('/api/addBaslik', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -22,20 +24,12 @@ const BaslikForm = () => {
                 body: JSON.stringify({ title: title }),
             });
 
-            if (!response.ok) {
+            if (!baslikResponse.ok) {
                 throw new Error('Failed to add baslik');
             }
 
-            const result = await response.json();
-            setMessage('Baslik added successfully');
-            setTitle('');
-        } catch (error) {
-            console.error('Error adding baslik:', error);
-            setMessage('An error occurred');
-        }
-
-        try {
-            const response = await fetch('/api/addEntry', {
+            // Add entry next
+            const entryResponse = await fetch('/api/addEntry', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -43,16 +37,20 @@ const BaslikForm = () => {
                 body: JSON.stringify({ content: text, authorName: nick, baslikName: title }),
             });
 
-            if (!response.ok) {
+            if (!entryResponse.ok) {
                 throw new Error('Failed to add entry');
             }
 
-            const result = await response.json();
-            setMessage('Entry added successfully');
+            // If both requests are successful
+            setMessage('Baslik and Entry added successfully');
+            setTitle('');
             setText('');
             setNick('');
+
+            // Redirect to the home page or another page
+            router.push("/baslik?name=" + title);
         } catch (error) {
-            console.error('Error adding entry:', error);
+            console.error('Error adding baslik or entry:', error);
             setMessage('An error occurred');
         }
     };
