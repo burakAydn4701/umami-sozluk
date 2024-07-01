@@ -1,10 +1,10 @@
 "use server";
 import { db } from "@/app/lib/prisdb";
 
-export default async function fetchBaslik(id) {
+export default async function fetchBaslik(name) {
     const baslik = await db.baslik.findUnique({
         where: {
-            id: Number(id)
+            title: name
         },
         include: {
             entries: {

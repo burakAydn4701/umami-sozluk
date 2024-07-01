@@ -5,21 +5,21 @@ import Entry from "@/app/components/entry";
 import styles from "./baslik.css";
 import InputForm from "@/app/input/inputForm";
 
-export default function ClientComponent({ id }) {
+export default function ClientComponent({ name }) {
     const [title, setTitle] = useState('');
     const [entries, setEntries] = useState([]);
 
     useEffect(() => {
         async function getBaslik() {
-            const result = await fetchBaslik(id);
+            const result = await fetchBaslik(name);
             setTitle(result.title);
             setEntries(result.entries);
         }
 
-        if (id) {
+        if (name) {
             getBaslik();
         }
-    }, [id]);
+    }, [name]);
 
     entries.sort((a, b) => a.no - b.no)
 

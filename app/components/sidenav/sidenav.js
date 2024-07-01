@@ -58,7 +58,7 @@ export default function Sidenav() {
             <ul className={"linkList"}>
                 {topics.map(t => (
                     <li key={t.id} className={"linkItem"}>
-                        <Link href={`/baslik?id=${t.id}`} className={"link"}>
+                        <Link href={`/baslik?name=${t.title}`} className={"link"}>
                             {t.title}
                         </Link>
                     </li>
