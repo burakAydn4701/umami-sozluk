@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.css";
 import Entry from "@/app/components/entry";
 import Data from "@/app/data";
-import Sidenav from "@/app/components/sidenav";
+import Sidenav from "@/app/components/sidenav/sidenav";
 export default function Home() {
   let baslikdata = Data()
   return (

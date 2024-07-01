@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/app/components/navbar";
-import Sidenav from "@/app/components/sidenav";
+import Sidenav from "@/app/components/sidenav/sidenav";
 import styles from "./globals.css"
 import {Suspense} from "react";
 import Loading from "@/app/components/loading";

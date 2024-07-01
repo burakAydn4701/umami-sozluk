@@ -8,12 +8,6 @@ import * as z from "zod"
 
 
 export default function SignupForm() {
-    const formSchema = z.object({
-        username: z.string().min(1, "kullanıcı adı boş kalamaz").max(20,
-            "kullanıcı adı 20 karakterden uzun olamaz"),
-        password: z.string().min(1, "şifre boş kalamaz").max(20,
-            "şifre 20 karakterden uzun olamaz")
-    })
 
     const handleSubmit = () => {
 

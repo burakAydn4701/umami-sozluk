@@ -17,8 +17,7 @@ const Navbar = () => {
                 </a>
             </div>
             <div className="navbar-right">
-                <a href="/login" className="navbar-link">Giriş yap</a>
-                <a href="/signup" className="navbar-link navbar-button">Kayıt ol</a>
+                <a href="/addBaslik" className="navbar-button">+ yeni başlık</a>
             </div>
         </nav>
     );

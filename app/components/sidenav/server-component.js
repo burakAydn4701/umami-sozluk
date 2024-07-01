@@ -1,0 +1,14 @@
+"use server";
+import { db } from "@/app/lib/prisdb";
+
+export default async function fetchBasliks() {
+    const baslik = await db.baslik.findMany({
+        select: {
+            id: true,
+            title: true
+        }
+    });
+
+    // Ensure the result is a plain JSON object
+    return JSON.parse(JSON.stringify(baslik));
+}
