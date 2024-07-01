@@ -1,49 +1,40 @@
 /* TextForm.css */
 
-.form-container {
-    background-color: #ffb28e;
-    width: 40vh;
-    height: 20vh;
-    padding: 6% 10%;
-    margin-top: 20%;
-    margin-left: 5%;
+.baslik-form-container {
+    background-color: #ffb691;
+    margin-top: 1%;
+    margin-left: 10%;
+    padding: 20px 50px; /* Add padding for better spacing */
+    width: 68vh;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    height: 100%;
 }
 
-.entry-form {
+.baslik-form {
     display: flex;
     flex-direction: column;
 }
 
-.text-input {
+.baslik-text-input, .baslik-title-input, .baslik-nick-input {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    resize: vertical;
     margin-bottom: 2%;
-    width: 300px;
-    align-self: center;
-}
-
-.nick-input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    resize: vertical;
-    margin-bottom: 2%;
-    width: 300px;
-    align-self: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .submit-button {
-    align-self: flex-start;
     background-color: coral;
+    width: 11vh;
     color: whitesmoke;
-    padding: 8px 15px;
+    padding: 7px 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s ease;
+
 }
 
 .submit-button:hover {

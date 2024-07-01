@@ -17,7 +17,7 @@ const Navbar = () => {
                 </a>
             </div>
             <div className="navbar-right">
-                <a href="/addBaslik" className="navbar-button">+ yeni başlık</a>
+                <Link href="/components/add-baslik" className="navbar-button">+ yeni başlık</Link>
             </div>
         </nav>
     );
