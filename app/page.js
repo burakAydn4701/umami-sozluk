@@ -17,15 +17,15 @@ export default function Home() {
           </Head>
           <main>
               <div className={"home-middle"}>
-                  <Link href={"/baslik?id=1"}>
+                  <Link href={"/baslik?name=recep ivedik"}>
                       <h3 className={"home-title"}>{baslikdata[0].title}</h3>
                   </Link>
                   <Entry content={"yarısında çıktığım filmdir"} author={"sozlukcu47"}/>
-                  <Link href={"/baslik?name=recep ivedik"}>
+                  <Link href={"/baslik?name=tiktok'ta dans eden gençler"}>
                       <h3 className={"home-title"}>{baslikdata[1].title}</h3>
                   </Link>
                   <Entry author={"boomer35"} content={"gümbür gümbür geliyor denen z kuşağı bunlar işte. yazık."}/>
-                  <Link href={"/baslik?id=4"}>
+                  <Link href={"/baslik?name=arda güler'in gürcistan'a attığı gol"}>
                       <h3 className={"home-title"}>{baslikdata[2].title}</h3>
                   </Link>
                   <Entry author={"robertobaggio"} content={"gürcistan'a karşı atmıştır, abartmayınız"}/>
