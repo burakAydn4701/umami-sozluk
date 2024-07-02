@@ -10,7 +10,8 @@ export default async function fetchBaslik(name) {
             entries: {
                 select: {
                     content: true,
-                    authorName: true
+                    authorName: true,
+                    createdAt: true
                 }
             }
         }

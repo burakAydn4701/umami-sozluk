@@ -5,6 +5,18 @@
 }
 
 .entry-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    align-self: flex-end;
     color: coral;
-    float: right;
+}
+
+.time-stamp {
+    margin-top: 0.5vh;
+    align-self: flex-end;
+    font-size: 10px;
+    color: #929191;
 }

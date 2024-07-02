@@ -66,7 +66,7 @@ export default function ClientComponent({ name }) {
         <div className={"baslik-main"}>
             <h1>{title}</h1>
             {entries.map(e => (
-                <Entry content={e.content} author={e.authorName} key={e.no}/>
+                <Entry content={e.content} author={e.authorName} time={e.createdAt} key={e.no}/>
             ))}
             <div className="form-container">
                 <form className="entry-form" onSubmit={handleSubmit}>
