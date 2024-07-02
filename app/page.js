@@ -6,12 +6,9 @@ import Data from "@/app/data";
 import Sidenav from "@/app/components/sidenav/sidenav";
 import Link from "next/link";
 import Head from "next/head";
+
 export default function Home() {
   let baslikdata = Data()
-    export const metadata = {
-        title: "Umami Sözlük",
-        description: "My description",
-    }
 
   return (
       <div>
@@ -24,7 +21,7 @@ export default function Home() {
                       <h3 className={"home-title"}>{baslikdata[0].title}</h3>
                   </Link>
                   <Entry content={"yarısında çıktığım filmdir"} author={"sozlukcu47"}/>
-                  <Link href={"/baslik?id=2"}>
+                  <Link href={"/baslik?name=recep ivedik"}>
                       <h3 className={"home-title"}>{baslikdata[1].title}</h3>
                   </Link>
                   <Entry author={"boomer35"} content={"gümbür gümbür geliyor denen z kuşağı bunlar işte. yazık."}/>
