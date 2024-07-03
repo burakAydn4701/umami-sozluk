@@ -29,8 +29,6 @@ export default function ClientComponent({ name }) {
         }
     }, [name]);
 
-    entries.sort((a, b) => a.no - b.no)
-
     const handleSubmit = async (e) => {
         e.preventDefault()
 
